@@ -119,10 +119,21 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group mb-3">
-                                    <label for="emailaddress">Username</label>
-                                    <input class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" type="text" required 
-                                   name="username" placeholder="Enter your Username">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="username">Username</label>
+                                            <input class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" type="text" required 
+                                           name="username" placeholder="Enter your Username">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-3">
+                                            <label for="emailaddress">Email</label>
+                                            <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" required 
+                                           name="email" placeholder="Enter your Email">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6">
