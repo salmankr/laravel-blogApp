@@ -2,92 +2,6 @@
 
 @section('content')
 <div class="container">
-    {{-- <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="fName" type="text" class="form-control{{ $errors->has('fName') ? ' is-invalid' : '' }}" name="fName" value="{{ old('fName') }}" required autofocus>
-
-                                @if ($errors->has('fName'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('fName') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="fName" type="text" class="form-control{{ $errors->has('lName') ? ' is-invalid' : '' }}" name="lName" value="{{ old('lName') }}" required autofocus>
-
-                                @if ($errors->has('lName'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('lName') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required>
-
-                                @if ($errors->has('username'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
     <div class="account-pages mt-4">
         <div class="container">
             <div class="row justify-content-center">
@@ -109,13 +23,13 @@
                                     <div class="col-lg-6">
                                         <div class="form-group mb-3">
                                             <label for="fullname">First Name</label>
-                                            <input class="form-control{{ $errors->has('fName') ? ' is-invalid' : '' }}" type="text" name="fName" placeholder="Enter First Name" required>
+                                            <input class="form-control{{ $errors->has('fName') ? ' is-invalid' : '' }}" type="text" name="fName" placeholder="Enter First Name" required value="{{ old('fName') }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group mb-3">
                                             <label for="fullname">Last Name</label>
-                                            <input class="form-control{{ $errors->has('lName') ? ' is-invalid' : '' }}" type="text" name="lName" placeholder="Enter last Name" required>
+                                            <input class="form-control{{ $errors->has('lName') ? ' is-invalid' : '' }}" type="text" name="lName" placeholder="Enter last Name" required value="{{ old('lName') }}">
                                         </div>
                                     </div>
                                 </div>
@@ -124,14 +38,14 @@
                                         <div class="form-group mb-3">
                                             <label for="username">Username</label>
                                             <input class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" type="text" required 
-                                           name="username" placeholder="Enter your Username">
+                                           name="username" placeholder="Enter your Username" value="{{ old('username') }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group mb-3">
                                             <label for="emailaddress">Email</label>
                                             <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" required 
-                                           name="email" placeholder="Enter your Email">
+                                           name="email" placeholder="Enter your Email" value="{{ old('email') }}">
                                         </div>
                                     </div>
                                 </div>
